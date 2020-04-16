@@ -55,6 +55,7 @@ ul {
 
 #show-list li {
   padding: 10px;
+  text-transform: uppercase;
 }
 
 details li {
