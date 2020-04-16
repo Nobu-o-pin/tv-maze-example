@@ -180,7 +180,7 @@ function renderEpisodes(episodes) {
       const li = document.createElement("li");
 
       li.textContent = episode.name;
-
+      summary.textContent = `Season ${season}/(${seasons[season].length}) Episodes` 
       list.append(li);
     }
 
