@@ -181,14 +181,21 @@ function renderShow(show) {
   const thetvdb = document.createElement("li");
   const imdb = document.createElement("li");  
 
-  tvrage.textContent = `tvrage - ${show.externals.tvrage}` ;
+  if(show.externals.tvrage){
+    tvrage.textContent = `tvrage - ${show.externals.tvrage}` ;
+    externalsList.append(tvrage);
+  } 
+  if(show.externals.thetvdb){
   thetvdb.textContent = `thetvdb -${show.externals.thetvdb}`;
-  imdb.textContent = `imdb - ${show.externals.imdb}`;
-
-  externalsList.append(tvrage);
   externalsList.append(thetvdb);
+  }
+  if(show.externals.imdb){
+  imdb.textContent = `imdb - ${show.externals.imdb}`;
   externalsList.append(imdb);
-
+  }  
+  
+  
+  
  externalsContent.append(externalsList);
 
   externalsRow.append(externalsTitle);
