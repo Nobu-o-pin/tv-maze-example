@@ -53,8 +53,12 @@ ul {
   margin: 0;
 }
 
-li {
-   padding-left: 20px; /*Cambio de Padding para los li */
+#show-list li {
+  padding: 10px;
+}
+
+details li {
+  padding-left: 20px; /*Cambio de Padding para los li */
 }
 
 li:hover {
@@ -91,12 +95,11 @@ td:first-child {
 }
 
 /* CAMBIOS HECHOS POR OSCAR AMAYA */
-#main{
-  
+#main {
   background-color: tomato;
 }
 
-.group{
+.group {
   background-color: tomato;
 }
 /* CAMBIOS HECHOS POR OSCAR AMAYA */
@@ -119,7 +122,6 @@ td:first-child {
 .group {
   margin-bottom: 10px;
 }
-
 
 @media only screen and (max-width: 750px) {
   body {
