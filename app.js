@@ -168,28 +168,53 @@ function renderEpisodes(episodes) {
   for (const season in seasons) {
     const details = document.createElement("details");
     const summary = document.createElement("summary");
-    const list = document.createElement("ul");
+    const list = document.createElement("ul");   
+    const title=document.createElement("p");
 
     summary.textContent = season;
 
-    if (season === "1") {
-      details.setAttribute("open", true);
-    }
+    // if (season === "1") {
+    //   details.setAttribute("open", true);
+    // }
+    title.textContent = `${seasons[season].length} Episodes`
+    list.append(title); 
 
     for (const episode of seasons[season]) {
-      const li = document.createElement("li");
+      const li=document.createElement("li");
 
-      li.textContent = episode.name;
+      //Agregado por Marver Urcuyo
+      const episode_details = document.createElement("details");
+      const episode_details_summary=document.createElement("summary");
+      const episode_summary=document.createElement("div");
+      const img=document.createElement("img");
+      episode_details_summary.textContent = episode.name;
+      //Agregado por Marver Urcuyo
+
+
       summary.textContent = `Season ${season}/(${seasons[season].length}) Episodes` 
+
+      // Cambios realizados por Marver Urcuyo
+      if(episode.image)
+      {
+        img.src=episode.image.medium;
+      }
+      episode_summary.innerHTML=episode.summary;
+
+      episode_details.append(episode_details_summary);
+      episode_details.append(img);
+      episode_details.append(episode_summary);
+      li.append(episode_details);
+      //Cambios realizados por Marver Urcuyo
+      
       list.append(li);
     }
-
     details.append(summary);
     details.append(list);
 
     episodeList.append(details);
   }
 }
+
 
 // helpers
 function submitDisableStateHandler() {
