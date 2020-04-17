@@ -1,138 +1,162 @@
 * {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 body {
-  margin: 0;
-  font-family: sans-serif;
-  font-size: 12px;
-  height: 100%;
-  min-height: 100vh;
-  /* EDITADO POR OSCAR AMAYA */
-  background-color: white;
-
-  /* flex */
-  display: flex;
-  flex-direction: row;
+    margin: 0;
+    font-family: sans-serif;
+    font-size: 12px;
+    height: 100%;
+    min-height: 100vh;
+    /* EDITADO POR OSCAR AMAYA */
+    background-color: white;
+    /* flex */
+    display: flex;
+    flex-direction: row;
 }
 
 h1 {
-  font-weight: 0.9em;
-  margin-top: 0;
-  margin-bottom: 5px;
+    font-weight: 0.9em;
+    margin-top: 0;
+    margin-bottom: 5px;
 }
 
 img {
-  max-width: 100%;
-  height: auto;
+    max-width: 100%;
+    height: auto;
 }
 
 details {
-  margin: 10px 0;
+    margin: 10px 0;
 }
 
 label {
-  display: block;
-  margin-bottom: 5px;
+    display: block;
+    margin-bottom: 5px;
 }
 
 input,
 button {
-  border: 1px solid gray;
-  padding: 10px;
-  border-radius: 4px;
+    border: 1px solid gray;
+    padding: 10px;
+    border-radius: 4px;
 }
 
 input {
-  width: 100%;
+    width: 100%;
 }
 
 ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
 #show-list li {
-  padding: 10px;
-  text-transform: uppercase;
+    padding: 10px;
+    text-transform: uppercase;
 }
 
 details li {
-  padding-left: 20px; /*Cambio de Padding para los li */
+    padding-left: 20px;
+    /*Cambio de Padding para los li */
 }
 
+
+/*evento de click en las etiquetas a de la lista shows del menu V:L*/
+
+a {
+    color: blue;
+    text-decoration-style: dotted;
+}
+
+a:focus {
+    text-decoration-color: #008458;
+    text-decoration-line: none;
+    text-decoration-style: none;
+}
+
+
+/**/
+
 li:hover {
-  background-color: #eeeeee;
+    background-color: #eeeeee;
 }
 
 table {
-  width: 100%;
-  border-collapse: collapse;
+    width: 100%;
+    border-collapse: collapse;
 }
 
 td {
-  padding: 10px;
-  border: 1px solid #eeeeee;
+    padding: 10px;
+    border: 1px solid #eeeeee;
 }
 
 td:first-child {
-  width: 50px;
-  text-transform: uppercase;
+    width: 50px;
+    text-transform: uppercase;
 }
 
 #main,
 #show-detail,
 #episode-list {
-  flex: 1;
-  padding: 10px;
-  border-right: 1px solid #eeeeee;
+    flex: 1;
+    padding: 10px;
+    border-right: 1px solid #eeeeee;
 }
+
 
 /* Element | http://127.0.0.1:8080/# */
 
-#show-detail > img:nth-child(3) {
-  padding-top: 10px;
-  padding-bottom: 10px;
+#show-detail>img:nth-child(3) {
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
+
 /* CAMBIOS HECHOS POR OSCAR AMAYA */
+
 #main {
-  background-color: tomato;
+    background-color: tomato;
 }
 
 .group {
-  background-color: tomato;
+    background-color: tomato;
 }
+
+
 /* CAMBIOS HECHOS POR OSCAR AMAYA */
 
+
 /* Element | http://127.0.0.1:8080/# */
 
-#show-detail > ul:nth-child(2) > li:nth-child(1) {
-  padding-top: 0px;
-  padding-bottom: 0px;
-  padding-left: 0px;
-  padding-right: 0px;
+#show-detail>ul:nth-child(2)>li:nth-child(1) {
+    padding-top: 0px;
+    padding-bottom: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
 }
 
+
 /* Element | http://127.0.0.1:8080/# */
 
-#show-detail > ul:nth-child(2) > li:nth-child(2) {
-  padding-right: 0px;
+#show-detail>ul:nth-child(2)>li:nth-child(2) {
+    padding-right: 0px;
 }
 
 .group {
-  margin-bottom: 10px;
+    margin-bottom: 10px;
 }
 
 img {
-  border: 1px solid black;
-  padding: 10px;
-  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.4);
+    border: 1px solid black;
+    padding: 10px;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.4);
 }
 
 @media only screen and (max-width: 750px) {
-  body {
-    flex-direction: column;
-  }
+    body {
+        flex-direction: column;
+    }
 }
