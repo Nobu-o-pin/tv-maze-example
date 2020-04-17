@@ -78,6 +78,7 @@ td {
 
 td:first-child {
   width: 50px;
+  text-transform: uppercase;
 }
 
 #main,
