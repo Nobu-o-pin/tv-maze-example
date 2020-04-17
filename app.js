@@ -105,7 +105,18 @@ function renderShow(show) {
   const genresRow = document.createElement("tr");
   const genresTitle = document.createElement("td");
   const genresContent = document.createElement("td");
-
+  const runtimeRow = document.createElement("tr");
+  const runtimeTitle = document.createElement("td");
+  const runtimeContent = document.createElement("td");
+  const siteRow = document.createElement("tr");
+  const siteTitle = document.createElement("td");
+  const siteContent = document.createElement("td");
+  const siteLink = document.createElement("a");
+  const externalsRow = document.createElement("tr");
+  const externalsTitle = document.createElement("td");
+  const externalsContent = document.createElement("td");
+  const externalsList = document.createElement("ul");
+  
   // name
   name.textContent = show.name;
 
@@ -146,11 +157,60 @@ function renderShow(show) {
   genresRow.append(genresTitle);
   genresRow.append(genresContent);
 
+  // runtime
+  runtimeTitle.textContent = "Runtime";
+  runtimeContent.textContent = show.runtime;
+
+  runtimeRow.append(runtimeTitle);
+  runtimeRow.append(runtimeContent);
+
+  // Site
+  siteTitle.textContent = "Site";
+  siteLink.setAttribute("href", show.officialSite);
+  siteLink.textContent = show.name;
+
+  siteContent.append(siteLink);
+
+  siteRow.append(siteTitle);
+  siteRow.append(siteContent);
+
+  
+  // Externals
+  externalsTitle.textContent = "Externals";
+  const tvrage = document.createElement("li");
+  const thetvdb = document.createElement("li");
+  const imdb = document.createElement("li");  
+
+  if(show.externals.tvrage){
+    tvrage.textContent = `tvrage - ${show.externals.tvrage}` ;
+    externalsList.append(tvrage);
+  } 
+  if(show.externals.thetvdb){
+  thetvdb.textContent = `thetvdb -${show.externals.thetvdb}`;
+  externalsList.append(thetvdb);
+  }
+  if(show.externals.imdb){
+  imdb.textContent = `imdb - ${show.externals.imdb}`;
+  externalsList.append(imdb);
+  }  
+  
+  
+  
+ externalsContent.append(externalsList);
+
+  externalsRow.append(externalsTitle);
+  externalsRow.append(externalsContent);
+
+
   // append to table
   detail.append(premieredRow);
   detail.append(statusRow);
   detail.append(typeRow);
   detail.append(genresRow);
+  detail.append(runtimeRow);
+  detail.append(siteRow);
+  detail.append(externalsRow);
+
 
   // append
   showDetail.append(name);
